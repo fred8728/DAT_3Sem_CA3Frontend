@@ -34,6 +34,7 @@ class LoggedIn extends Component {
   }
   componentDidMount() {
 
+    facade.fetchData().then(res => this.setState({ dataFromServer: res.msg }));
   }
   render() {
     return (
