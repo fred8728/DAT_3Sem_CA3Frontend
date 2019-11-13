@@ -47,6 +47,9 @@ class ApiFacade {
     fetchData = () => {
         const options = this.makeOptions("GET", true); //True add's the token
         return fetch(URL + "/api/info/user", options).then(handleHttpErrors);
+
+        
+
     }
 
 

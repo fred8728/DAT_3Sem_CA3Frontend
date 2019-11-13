@@ -9,6 +9,8 @@ import {
 import facade from "./apiFacade";
 import Nav from "./Navigation";
 import Swi from "./Switch";
+import Main from "./Main.js"
+
 
 class LogIn extends Component {
   constructor(props) {
@@ -44,6 +46,9 @@ class LoggedIn extends Component {
   componentDidMount() {
 
     facade.fetchData().then(res => this.setState({ dataFromServer: res.msg }));
+
+    
+
   }
   render() {
     return (
@@ -75,8 +80,12 @@ class App extends Component {
           (<div>
             <LoggedIn />
             <button onClick={this.logout}>Logout</button>
+
             <Nav nav = {Nav}/>
             <Swi switch = {Swi}/>
+
+            <Main />
+
           </div>)}
       </Router>
     )
