@@ -19,8 +19,7 @@ const Content = props => {
           <Home />
         </Route>
         <Route path="/products">
-          {/* <Products bookFactory={props.bookFactory} /> */}
-          <Products/>
+          <Products bookFactory={props.bookFactory} />
         </Route>
         <Route path="/company">
           <Company />
@@ -67,15 +66,15 @@ const Header = () => {
 const Home = () => {
   return <div> Home </div>;
 };
-
-const Products = (/* { bookFactory } */) => {
+/* 
+const Products = ({ bookFactory }) => {
   console.log(bookFactory.getBooks());
   let match = useRouteMatch();
   return (
     <div>
       <h3> products </h3>
-      {/* <p> amount: {bookFactory.getBooks()}</p> */}
-      {/* <table>
+      <p> amount: {bookFactory.getBooks()}</p>
+      <table>
         <thead>
           <tr>
             <th>ID</th>
@@ -96,11 +95,14 @@ const Products = (/* { bookFactory } */) => {
             );
           })}
         </tbody>
-      </table> */}
+      </table>
     </div>
   );
-};
+}; */
 
+const Products = () => {
+  return <div> proc </div>;
+};
 const Company = () => {
   return <div> company </div>;
 };
