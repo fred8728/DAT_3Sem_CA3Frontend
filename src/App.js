@@ -1,5 +1,14 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+import {
+    BrowserRouter as Router, 
+    Route, 
+    Link, 
+    Switch,
+    useRouteMatch,
+    useParams} from "react-router-dom";
 import facade from "./apiFacade";
+import Nav from "./Navigation";
+import Swi from "./Switch";
 
 class LogIn extends Component {
   constructor(props) {
@@ -61,13 +70,15 @@ class App extends Component {
   } //TODO
   render() {
     return (
-      <div>
+      <Router>
         {!this.state.loggedIn ? (<LogIn login={this.login} />) :
           (<div>
             <LoggedIn />
             <button onClick={this.logout}>Logout</button>
+            <Nav nav = {Nav}/>
+            <Swi switch = {Swi}/>
           </div>)}
-      </div>
+      </Router>
     )
   }
 
