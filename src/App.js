@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import facade from "./apiFacade";
+import Main from "./Main.js"
 
 class LogIn extends Component {
   constructor(props) {
@@ -35,6 +36,9 @@ class LoggedIn extends Component {
   componentDidMount() {
 
     facade.fetchData().then(res => this.setState({ dataFromServer: res.msg }));
+
+    
+
   }
   render() {
     return (
@@ -66,6 +70,7 @@ class App extends Component {
           (<div>
             <LoggedIn />
             <button onClick={this.logout}>Logout</button>
+            <Main />
           </div>)}
       </div>
     )
