@@ -9,6 +9,7 @@ useParams} from "react-router-dom";
 import StarWars from "./StarWars";
 import Users from "./Users";
 import Admins from "./Admin";
+import Login from "./Login";
 
 const Switches = () => {
     //fetch her måske siden det er parent component til vores 3 fetch sider.
@@ -36,6 +37,9 @@ const Switches = () => {
       </Route>
       <Route path="/admins">
         <Admins />
+      </Route>
+      <Route path= "/login">
+        <Login />
       </Route>
     </Switch>
     );

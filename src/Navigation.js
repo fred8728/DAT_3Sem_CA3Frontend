@@ -14,14 +14,17 @@ import {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/users">See all users</Link>
           </li>
           <li>
             <Link to="/admins">See all admins</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/starwars">Starwars</Link>
+          </li>
+          <li>
+            <Link to="/login">Log in!</Link>
           </li>
         </ul>
      </nav>

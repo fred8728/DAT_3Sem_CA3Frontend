@@ -9,6 +9,8 @@ import {
 import facade from "./apiFacade";
 import Nav from "./Navigation";
 import Swi from "./Switch";
+import Admins from "./Admin";
+import Users from "./Users";
 
 
 
@@ -79,12 +81,20 @@ class App extends Component {
         {!this.state.loggedIn ? (<LogIn login={this.login} />) :
           (<div>
             <LoggedIn />
-            <button onClick={this.logout}>Logout</button>
-
+            <nav>
+            <li>
+            <Link to="/users">See all users</Link>
+          </li>
+          <li>
+            <Link to="/admins">See all admins</Link>
+          </li>
+            </nav>
+             <button onClick={this.logout}>Logout</button>
+             </div>)}
             <Nav nav = {Nav}/>
             <Swi switch = {Swi}/>
 
-          </div>)}
+          
       </Router>
     )
   }
