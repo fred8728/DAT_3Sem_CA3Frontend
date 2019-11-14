@@ -84,8 +84,6 @@ class App extends Component {
             <Nav nav = {Nav}/>
             <Swi switch = {Swi}/>
 
-            <Main />
-
           </div>)}
       </Router>
     )
