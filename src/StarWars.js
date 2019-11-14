@@ -8,13 +8,22 @@ import {
     useParams} from "react-router-dom";
     //nedenunder får vi bare hele endpointet ud som json. Vi vil også gerne have hvert 
     //element ud hver for sig
-    const StarWars = ({userz}, props) => {
-    console.log(userz); 
+    //koden virker ikke hvis man logger ind på http://localhost:3000/starwars, 
+    //det skal være uden /starwars , måske skal man også lige vente 5 sek(?)
+    const StarWars = ({starwars}, props) => {
+        let match = useRouteMatch();
+    console.log(starwars);
+    //console.log(starwars.name); 
         return (
            <div>
-               
-                   <pre>{JSON.stringify(userz, null, 2)}</pre>
-               
+               <ul>
+                   <li>
+                        <pre>{JSON.stringify(starwars, null, 2)}</pre>
+                   </li>
+                   <li>
+                        Name:{JSON.stringify(starwars.name)}
+                   </li>
+                </ul>
            </div>
         );
     };

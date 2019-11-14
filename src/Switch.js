@@ -12,12 +12,12 @@ import Admins from "./Admin";
 
 const Switches = () => {
     //fetch her måske siden det er parent component til vores 3 fetch sider.
-    const [userz,setUserz] = useState();
+    const [starwars,setStarwars] = useState();
     async function fetchData() {
     fetch('http://localhost:8080/securitystarter/api/info/person/1')
     .then(response=>response.json())
-    .then(data=> setUserz( data )); 
-    console.log(userz);
+    .then(data=> setStarwars( data )); 
+    console.log(starwars);
     }
 
     useEffect(() => {
@@ -29,7 +29,7 @@ const Switches = () => {
     return (
     <Switch>
       <Route path="/starwars">
-        <StarWars userz={userz}/>
+        <StarWars starwars={starwars}/>
       </Route>
       <Route path="/users">
         <Users />
